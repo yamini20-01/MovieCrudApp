@@ -1,0 +1,206 @@
+{
+	"info": {
+		"_postman_id": "fddcb966-1f3d-4eae-8536-59c9d906ac69",
+		"name": "MovieCrudApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24432416"
+	},
+	"item": [
+		{
+			"name": "AuthLogin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n    \"email\":\"yaminid636@gmail.com\",\r\n    \"password\":\"yamini@20\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllUsers",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MTQ4NDA3OTUsImV4cCI6MTcxNDkyNzE5NX0.lAR9DRibAyr-rrPXl3WzNG3txpyivtuW-I-grWyM_p4",
+						"uuid": "b546a617-9964-482c-9983-379fb1d0133a"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NewUserRegisterWithDuplicate",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "NewUserRegister",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MTQ4NDE2NDIsImV4cCI6MTcxNDkyODA0Mn0.ioQzcbbBzgfNgeMDW-Iywdphp8CNp6pBRIY8AJRVYrI",
+						"uuid": "cbfe5f2a-2800-4f11-9da1-8943ba53c9f7"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"username\": \"yaminid\",\r\n        \"email\": \"yaminidodda@gmail.com\",\r\n        \"password\": \"yaminid@20\",\r\n        \"movieSubscriptionType\": \"free\",\r\n        \"startDate\": \"2023-05-04T00:00:00.000Z\",\r\n        \"endDate\": \"2024-05-04T00:00:00.000Z\"\r\n        \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/users/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AuthLogin2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"yaminid636@gmail.com\",\r\n    \"password\":\"yamini@20\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetById",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllSubscriptions",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MTQ4NDE4MTAsImV4cCI6MTcxNDkyODIxMH0.phpKnboUH8hr-BYGaZgbFioCm-c-v9cb1rygNKA2JAA",
+						"uuid": "dddecae7-4654-4390-956d-36b4746e776c"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/subscriptions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"subscriptions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllMovies",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MTQ4NDE4MTAsImV4cCI6MTcxNDkyODIxMH0.phpKnboUH8hr-BYGaZgbFioCm-c-v9cb1rygNKA2JAA",
+						"uuid": "5c9f83e0-16e2-4808-9b7f-f28f06e7d50e"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/movies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"movies"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
